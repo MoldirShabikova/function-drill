@@ -269,6 +269,20 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
+function bigOrSmall(arr){
+  let answers =[]
+  for(let i =0; i < arr.length; i++){
+   if(arr[i] <= 100){
+    answers.push('small')
+   }else{
+    answers.push('big')
+   }
+  }
+return answers
+}
+
+let arrayEvaluator = bigOrSmall(bigOrSmallArray)
+console.log(arrayEvaluator)
 
 
 ////////////////// PROBLEM 16 ////////////////////
@@ -280,7 +294,15 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
-
+const theEliminator=(arr1, arr2)=>{
+  for(let i =0; i< arr1.length; i++){
+    if(arr1[i] === arr2){
+   arr1.splice(i, 1)
+      return arr1
+    }
+  }
+}
+console.log(theEliminator(contestants, loser))
 
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
@@ -290,8 +312,11 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
-
-
+const toUpperChar =(str)=>{
+let newStr = str.toUpperCase()
+console.log(newStr)
+}
+toUpperChar(sampleString)
 ////////////////// PROBLEM 18 ////////////////////
 /*
   Write a function called emailCheck that takes in
@@ -303,6 +328,15 @@ let sampleString = "Hi, my name is Kylo."
   return 'must provide a valid email address'
 */
 
+
+
+
+function emailCheck(email){
+  email = String(email).trim()
+  return email.includes('@')? "email verified" : "must provide a valid email address"
+}
+console.log(emailCheck("moldirgmail"))
+console.log(emailCheck("moldir@gmail"))
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -310,7 +344,12 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
-
+const totalAmount = (amount)=>{
+let price = 3
+return amount / price
+}
+let totalFrogs = totalAmount(100)
+console.log(totalFrogs)
 
 ////////////////// PROBLEM 20 ////////////////////
 /*
@@ -319,7 +358,12 @@ let sampleString = "Hi, my name is Kylo."
 
 //CODE HERE
 
-
+const totalAmount2 = (amount)=>{
+  let price = 3
+  return Math.floor(amount / price)
+  }
+  let totalFrogs2 = totalAmount2(100)
+  console.log(totalFrogs2)
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 /*
@@ -328,7 +372,9 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 
 //CODE HERE
 
-
+const sortOrder =(arr)=>{
+  
+}
 ////////////////// PROBLEM 22 ////////////////////
 
 let duck = "cute";
