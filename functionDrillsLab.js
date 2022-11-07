@@ -13,7 +13,10 @@
 
 //CODE HERE
 
-
+function helloWorld(){
+  console.log('Hello world!')
+}
+helloWorld()
 ////////////////// PROBLEM 2 ////////////////////
 
 /*
@@ -22,6 +25,9 @@
 
 //CODE HERE
 
+const jsNinja =() =>{
+  return "I am a JavaScript ninja!`"
+}
 
 ////////////////// PROBLEM 3 ////////////////////
 /*
@@ -32,7 +38,10 @@
 
 //CODE HERE
 
-
+function printName(name){
+  console.log(name)
+}
+printName('Moldir')
 ////////////////// PROBLEM 4 ////////////////////
 /*
   Create a function called greeting that
@@ -45,7 +54,10 @@
 
 //CODE HERE
 
-
+const greeting =(name)=>{
+console.log(`Hello, ${name}`)
+}
+greeting('Ailyn')
 ////////////////// PROBLEM 5 ////////////////////
 
 /*
@@ -59,6 +71,18 @@
 
 //CODE HERE
 
+const compareNums=(num1, num2)=>{
+  if(num1 > num2){
+    return num1
+  }else return num2
+}
+console.log(compareNums(2,9))
+
+const compareNumsTernary =(n1, n2)=>{
+  let num = n1> n2 ? n1 : n2 
+  return num
+}
+console.log(compareNumsTernary(3 , 2))
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -70,6 +94,13 @@
 
 //CODE HERE
 
+function add(num1,num2 ){
+ num1 = Number(num1)
+ num2 = + num2
+ return num1 + num2
+}
+console.log(add('2', 5))
+console.log(add(6, 5))
 
 ////////////////// PROBLEM 7 ////////////////////
 
