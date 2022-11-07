@@ -82,7 +82,7 @@ const compareNumsTernary =(n1, n2)=>{
   let num = n1> n2 ? n1 : n2 
   return num
 }
-console.log(compareNumsTernary(3 , 2))
+console.log(compareNumsTernary(24 , 24))
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -115,7 +115,7 @@ const exclaim = function(str) {
 
 // console.log('arrow')
 // console.log('declaration')
-// console.log('expression')
+console.log('expression')
 
 
 
@@ -130,7 +130,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// console.log('arrow')
+console.log('arrow')
 // console.log('declaration')
 // console.log('expression')
 
@@ -140,8 +140,8 @@ const exclaimTwo = str => {
 
   Brownie points if you use a template string
 */
-
-
+ const exclaimTwo2 = str => `${str.toLowerCase()}!!!`
+console.log(exclaimTwo2('KhhggT'))
 
 ////////////////// PROBLEM 9 ////////////////////
 
@@ -155,7 +155,7 @@ function exclaimFour(str) {
 }
 
 // console.log('arrow')
-// console.log('declaration')
+console.log('declaration')
 // console.log('expression')
 
 
@@ -170,6 +170,19 @@ function exclaimFour(str) {
 
 //CODE HERE
 
+const nameCheck=(name)=>{
+ if(name === 'Steven'){
+  return `What is up Steven?`
+ }
+ if(name === 'Bryan'){
+  return `Hey Bryan!`
+ }
+ if(name === name){
+  return `Cool name, ${name}`
+ }
+}
+let nameGreeting = nameCheck('Habib')
+console.log(nameGreeting)
 
 ////////////////// PROBLEM 11 ////////////////////
 /*
@@ -183,7 +196,19 @@ function exclaimFour(str) {
 
 //CODE HERE
 
-
+const faveColorFinder=(color)=>{
+  if(color === 'red'){
+    return "red is a great color"
+  }else if(color === 'green'){
+    return "green is a solid favorite color"
+  }else if(color === 'black'){
+    return "so trendy"
+  }else{
+    return 'you need to evaluate your favorite color choice'
+  }
+}
+let colorRating = faveColorFinder('gray')
+console.log(colorRating)
 ////////////////// PROBLEM 12 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 /*
@@ -194,7 +219,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 
 //CODE HERE
 
-
+const printAllNames=(arr)=>{
+  for(let  i =0; i < arr.length; i++){
+    console.log(arr[i])
+  }
+}
+printAllNames(namesArr)
 ////////////////// PROBLEM 13 ////////////////////
 /*
   Create a function called thatsOdd that takes in a single argument (a number).
@@ -205,6 +235,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 
 //CODE HERE
 
+function thatsOdd(num){
+  let isOdd = num % 2 === 0? "That is odd indeed!": "That's not odd"
+  return isOdd
+}
+let oddChecker = thatsOdd(6)
+console.log(oddChecker)
 
 ////////////////// PROBLEM 14 ////////////////////
 
@@ -218,7 +254,9 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 
 //CODE HERE
 
+const bestMovie =(title)=> `${title} is the best movie ever!` 
 
+console.log(bestMovie('Sharknado'))
 ////////////////// PROBLEM 15 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 /* 
