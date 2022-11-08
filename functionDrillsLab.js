@@ -286,7 +286,7 @@ console.log(arrayEvaluator)
 
 
 ////////////////// PROBLEM 16 ////////////////////
-let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
+let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Glimmer','Rue', 'Thresh', 'Clove', 'Marvel']
 let loser = 'Glimmer'
 /*
   Write a function that is called theEliminator, which takes in two arguments, contestants (which will each be an array of strings), and loser (which will be a string).
@@ -298,9 +298,9 @@ const theEliminator=(arr1, arr2)=>{
   for(let i =0; i< arr1.length; i++){
     if(arr1[i] === arr2){
    arr1.splice(i, 1)
-      return arr1
-    }
   }
+}
+return arr1
 }
 console.log(theEliminator(contestants, loser))
 
@@ -372,9 +372,20 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 
 //CODE HERE
 
-const sortOrder =(arr)=>{
-  
+
+function checkArrayAscending(arr) {
+  let comparisonValue = arr[0]
+  for (let i = 1; i < arr.length - 1; i++) {
+    if (arr[i] <= comparisonValue) {
+      return false
+    } else {
+      comparisonValue = arr[i]
+    }
+  }
+  return true
 }
+
+let arrayIsAscending = checkArrayAscending(sampleArray)
 ////////////////// PROBLEM 22 ////////////////////
 
 let duck = "cute";
@@ -397,13 +408,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ["duck"]
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ["duck", "rubberDuck"]
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ["duck", "sailorDuck", "rubberDuck"]
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ["realDuck", "duck"]
